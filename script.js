@@ -49,6 +49,10 @@ function validateLoginForm() {
 
     // Simulate successful login for demonstration purposes
     alert('Login successful!');
+
+    // Redirect to home.html on successful login
+    window.location.href = 'home.html';
+
     return true;
 }
 

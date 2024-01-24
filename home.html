@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home-styles.css"> <!-- Create a new CSS file for home page styles -->
+    <title>Restaurant Home</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab" id="homeTab" onclick="changeTab('home')">Home</div>
+            <div class="tab" id="menuTab" onclick="changeTab('menu')">Menu</div>
+            <div class="tab" id="aboutUsTab" onclick="changeTab('aboutUs')">About Us</div>
+            <div class="tab" id="profileTab" onclick="changeTab('profile')">Profile</div>
+        </div>
+
+        <div class="content" id="homeContent">
+            <div class="sidebar">
+                <h2>Reservations</h2>
+                <p>You have no current reservations!</p>
+            </div>
+            <div class="main-content">
+                <h2>News</h2>
+                <p>Dummy news content goes here...</p>
+
+                <h2>Blogs</h2>
+                <p>Dummy blog content goes here...</p>
+            </div>
+        </div>
+
+        <div class="content" id="menuContent">
+            <h2>Menu</h2>
+            <p>Dummy Indian menu goes here...</p>
+        </div>
+
+        <div class="content" id="aboutUsContent">
+            <h2>About Us</h2>
+            <p>Dummy history content goes here...</p>
+
+            <h2>Gallery</h2>
+            <!-- Add your carousel of images here -->
+
+            <h2>Contact Us</h2>
+            <p>Contact information goes here...</p>
+
+            <h2>Feedback Form</h2>
+            <!-- Add a link to the feedback form -->
+        </div>
+
+        <div class="content" id="profileContent">
+            <!-- Add customization options for logged-in users -->
+            <h2>Profile</h2>
+            <p>Customization options go here...</p>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>
