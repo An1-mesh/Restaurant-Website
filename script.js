@@ -29,6 +29,8 @@ function validateLoginForm() {
 
     // Additional validation rules for login can be added here
 
+    // Simulate successful login for demonstration purposes
+    alert('Login successful!');
     return true;
 }
 
@@ -36,18 +38,37 @@ function validateSignupForm() {
     var newUsername = document.getElementById('newUsername').value;
     var newPassword = document.getElementById('newPassword').value;
     var confirmPassword = document.getElementById('confirmPassword').value;
+    var errorMessage = document.getElementById('error-message');
+
+    // Clear previous error messages and reset color
+    errorMessage.innerHTML = '';
+    errorMessage.style.color = 'red'; // Set color to red
 
     if (!newUsername || !newPassword || !confirmPassword) {
+        errorMessage.innerHTML = 'All fields must be filled out';
         alert('All fields must be filled out');
         return false;
     }
 
+    if (!/^[A-Za-z0-9]+$/.test(newUsername)) {
+        errorMessage.innerHTML = 'Username should be alphanumeric';
+        alert('Username should be alphanumeric');
+        return false;
+    }
+
+    if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.*\s).{6,}/.test(newPassword)) {
+        errorMessage.innerHTML = 'Password should be at least 6 characters, including 1 uppercase letter, 1 lowercase letter, 1 special character, and 1 number';
+        alert('Password should be at least 6 characters, including 1 uppercase letter, 1 lowercase letter, 1 special character, and 1 number.');
+        return false;
+    }
+
     if (newPassword !== confirmPassword) {
+        errorMessage.innerHTML = 'Passwords do not match';
         alert('Passwords do not match');
         return false;
     }
 
-    // Additional validation rules for signup can be added here
-
+    // Simulate successful signup for demonstration purposes
+    alert('Signup successful!');
     return true;
 }

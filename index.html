@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Login and Signup Page</title>
+    <style>
+        /* Add this style for red error message */
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -33,13 +40,15 @@
             <div class="form" id="signupForm">
                 <h2>Signup</h2>
                 <label for="newUsername">Username:</label>
-                <input type="text" id="newUsername" name="newUsername" required>
+                <input type="text" id="newUsername" name="newUsername" pattern="[A-Za-z0-9]+" title="Username should be alphanumeric" required>
                 
                 <label for="newPassword">Password:</label>
-                <input type="password" id="newPassword" name="newPassword" required>
+                <input type="password" id="newPassword" name="newPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.*\s).{6,}" title="Password should be at least 6 characters, including 1 uppercase letter, 1 lowercase letter, 1 special character, and 1 number" required>
                 
                 <label for="confirmPassword">Confirm Password:</label>
                 <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                <div id="error-message" class="error-message"></div>
                 
                 <button type="button" onclick="validateSignupForm()">Signup</button>
             </div>
