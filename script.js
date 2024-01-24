@@ -21,9 +21,27 @@ function changeTab(formId) {
 function validateLoginForm() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
+    var errorMessage = document.getElementById('error-message');
+
+    // Clear previous error messages and reset color
+    errorMessage.innerHTML = '';
+    errorMessage.style.color = 'red'; // Set color to red
 
     if (!username || !password) {
+        errorMessage.innerHTML = 'All fields must be filled out';
         alert('All fields must be filled out');
+        return false;
+    }
+
+    if (!/^[A-Za-z0-9]+$/.test(username)) {
+        errorMessage.innerHTML = 'Username should be alphanumeric';
+        alert('Username should be alphanumeric');
+        return false;
+    }
+
+    if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.*\s).{6,}/.test(password)) {
+        errorMessage.innerHTML = 'Password should be at least 6 characters, including 1 uppercase letter, 1 lowercase letter, 1 special character, and 1 number';
+        alert('Password should be at least 6 characters, including 1 uppercase letter, 1 lowercase letter, 1 special character, and 1 number');
         return false;
     }
 
@@ -33,6 +51,7 @@ function validateLoginForm() {
     alert('Login successful!');
     return true;
 }
+
 
 function validateSignupForm() {
     var newUsername = document.getElementById('newUsername').value;

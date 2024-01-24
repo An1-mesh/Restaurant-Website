@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Login and Signup Page</title>
-    <style>
-        /* Add this style for red error message */
-        .error-message {
-            color: red;
-            margin-top: 5px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -33,6 +26,8 @@
                 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
+
+                <div id="error-message" class="error-message"></div>
                 
                 <button type="button" onclick="validateLoginForm()">Login</button>
             </div>
