@@ -83,7 +83,7 @@ body {
     width: 100%;
 }
 
-.error-message {
+.login-error-message, .signup-error-message {
     color: red;
     margin-top: 5px;
 }

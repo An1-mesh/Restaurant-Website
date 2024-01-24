@@ -21,7 +21,7 @@ function changeTab(formId) {
 function validateLoginForm() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-    var errorMessage = document.getElementById('error-message');
+    var errorMessage = document.getElementById('login-error-message');
 
     // Clear previous error messages and reset color
     errorMessage.innerHTML = '';
@@ -57,7 +57,7 @@ function validateSignupForm() {
     var newUsername = document.getElementById('newUsername').value;
     var newPassword = document.getElementById('newPassword').value;
     var confirmPassword = document.getElementById('confirmPassword').value;
-    var errorMessage = document.getElementById('error-message');
+    var errorMessage = document.getElementById('signup-error-message');
 
     // Clear previous error messages and reset color
     errorMessage.innerHTML = '';
