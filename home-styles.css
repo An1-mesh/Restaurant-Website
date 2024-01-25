@@ -52,7 +52,9 @@ body {
     display: flex;
 }
 
-/* Add these styles at the end of your home-styles.css file */
+#galleryContent {
+    display: none;
+}
 
 .collapsible-button {
     cursor: pointer;
@@ -99,7 +101,22 @@ body {
     transition: margin-left 0.5s; /* Add transition for smoother effect */
 }
 
+.blog-list, .news-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 200px; /* Adjust the maximum height according to your preference */
+}
 
+.blog-list li, .news-list li {
+    margin-bottom: 10px; /* Adjust the margin according to your preference */
+}
+
+
+.scrollable {
+    overflow-y: auto;
+}
 
 /* Add this style for logout button */
 .logout-container {

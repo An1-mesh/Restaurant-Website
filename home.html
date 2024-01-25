@@ -11,8 +11,8 @@
         <div class="tabs">
             <div class="tab" id="homeTab" onclick="changeTab('home')">Home</div>
             <div class="tab" id="menuTab" onclick="changeTab('menu')">Menu</div>
+            <div class="tab" id="galleryTab" onclick="changeTab('gallery')">Gallery</div>
             <div class="tab" id="aboutUsTab" onclick="changeTab('aboutUs')">About Us</div>
-            <div class="tab" id="profileTab" onclick="changeTab('profile')">Profile</div>
         </div>
 
         <div class="logout-container">
@@ -23,16 +23,39 @@
             <button class="collapsible-button" onclick="toggleCollapsible()">Reservations</button>
             <div class="sidebar" id="reservationsSidebar">
                 <h2>Reservations</h2>
-                <p>You have no current reservations!</p>
+                <p>You have no current reservations :/</p>
             </div>
+
             <div class="main-content">
                 <h2>News</h2>
-                <p>Chef John awarded "Best Chef of the Year" by Food Magazine.</p>
-                <p>Restaurant featured in the top 10 list of fine dining places in the city.</p>
-
+                <div class="scrollable">
+                    <ul class="news-list">
+                        <li>Chef John awarded "Best Chef of the Year" by Food Magazine.</li>
+                        <li>Restaurant featured in the top 10 list of fine dining places in the city.</li>
+                        <li>New Menu Launch Event: A Culinary Extravaganza!</li>
+                        <li>Exclusive Wine Tasting Event with Renowned Sommelier</li>
+                        <li>Grand Opening of Our New Branch in Downtown</li>
+                        <li>Food Festival Highlights: Flavors from Around the World</li>
+                        <li>Chef's Special: Truffle-infused Delights Now on the Menu</li>
+                        <li>Live Cooking Classes with Chef Maria Every Weekend</li>
+                        <li>Seasonal Harvest Festival: Farm-to-Table Delights Await You!</li>
+                        <li>Exciting Collaboration with Local Artists for Unique Dining Experience</li>
+                    </ul>
+                </div>
+        
                 <h2>Blogs</h2>
-                <p>Explore the world of spices with our expert chefs!</p>
-                <p>Discover the art of pairing wine with Indian cuisine.</p>
+                <div class="scrollable">
+                    <ul class="blog-list">
+                        <li>10 Must-Try Desserts for Sweet Lovers</li>
+                        <li>The Art of Pasta Making: A Beginner's Guide</li>
+                        <li>Spicy Delights: Exploring Global Hot Sauce Varieties</li>
+                        <li>Farm-to-Table: Understanding the Locavore Movement</li>
+                        <li>Healthy Eating Hacks: Boost Your Immunity with Superfoods</li>
+                        <li>Vegetarian Delights: Creative Meat-Free Recipes</li>
+                        <li>Asian Street Food: A Culinary Journey through Flavors</li>
+                        <li>The Perfect Cup: Demystifying Coffee Brewing Techniques</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -41,25 +64,23 @@
             <p>Dummy Indian menu goes here...</p>
         </div>
 
+        <div class="content" id="galleryContent">
+            <!-- Your gallery content goes here -->
+            <h2>Gallery</h2>
+            <p>Explore our restaurant through captivating images and moments captured in our gallery.</p>
+            <!-- Add your gallery content here, such as images or a photo carousel -->
+        </div>
+
         <div class="content" id="aboutUsContent">
             <h2>About Us</h2>
             <p>Dummy history content goes here...</p>
-
-            <h2>Gallery</h2>
-            <!-- Add your carousel of images here -->
-
+        
             <h2>Contact Us</h2>
             <p>Contact information goes here...</p>
-
+        
             <h2>Feedback Form</h2>
             <!-- Add a link to the feedback form -->
-        </div>
-
-        <div class="content" id="profileContent">
-            <!-- Add customization options for logged-in users -->
-            <h2>Profile</h2>
-            <p>Customization options go here...</p>
-        </div>
+        </div>    
     </div>
 
     <script src="home.js"></script>
