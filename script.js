@@ -47,6 +47,9 @@ function validateLoginForm() {
 
     // Additional validation rules for login can be added here
 
+    // Set the flag in localStorage indicating that the user is logged in
+    localStorage.setItem('isLoggedIn', 'true');
+
     // Simulate successful login for demonstration purposes
     alert('Login successful!');
 
