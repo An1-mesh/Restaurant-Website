@@ -113,9 +113,20 @@ body {
     margin-bottom: 10px; /* Adjust the margin according to your preference */
 }
 
-
 .scrollable {
     overflow-y: auto;
+}
+
+/* Add this style for better spacing in the about us content */
+.history-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.history-content p {
+    flex: 1 1 calc(50% - 20px); /* Adjust the width of each column */
 }
 
 /* Add this style for logout button */
