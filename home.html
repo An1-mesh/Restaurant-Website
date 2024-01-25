@@ -15,17 +15,24 @@
             <div class="tab" id="profileTab" onclick="changeTab('profile')">Profile</div>
         </div>
 
+        <div class="logout-container">
+            <button onclick="logout()">Logout</button>
+        </div>
+
         <div class="content" id="homeContent">
-            <div class="sidebar">
+            <button class="collapsible-button" onclick="toggleCollapsible()">Reservations</button>
+            <div class="sidebar" id="reservationsSidebar">
                 <h2>Reservations</h2>
                 <p>You have no current reservations!</p>
             </div>
             <div class="main-content">
                 <h2>News</h2>
-                <p>Dummy news content goes here...</p>
+                <p>Chef John awarded "Best Chef of the Year" by Food Magazine.</p>
+                <p>Restaurant featured in the top 10 list of fine dining places in the city.</p>
 
                 <h2>Blogs</h2>
-                <p>Dummy blog content goes here...</p>
+                <p>Explore the world of spices with our expert chefs!</p>
+                <p>Discover the art of pairing wine with Indian cuisine.</p>
             </div>
         </div>
 

@@ -18,9 +18,16 @@ body {
     margin-top: 20px; /* Add some margin at the top */
 }
 
+.content {
+    display: none;
+    padding: 20px;
+}
+
 .tabs {
     display: flex;
     margin-top: 20px;
+    position: absolute;
+    top: 0;
 }
 
 .tab {
@@ -40,14 +47,83 @@ body {
     color: #3fc3af;
 }
 
-.content {
-    display: none;
-    padding: 20px;
-}
-
 /* Additional styles for specific content sections if needed */
 #homeContent {
     display: flex;
+}
+
+/* Add these styles at the end of your home-styles.css file */
+
+.collapsible-button {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    background-color: #fff;
+    color: #3fc3af;
+    border: 1px solid #3fc3af;
+    border-radius: 10px;
+    z-index: 1;
+    transition: background-color 0.3s, color 0.3s;
+    position: fixed;
+    top: 60px; /* Adjust the top position */
+    right: 10px;
+}
+
+.collapsible-button:hover {
+    background-color: #f0f0f0;
+    color: #3fc3af;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0; /* Change right to left */
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px; /* Adjust top padding to accommodate the reservations button */
+}
+
+.sidebar.collapsed {
+    width: 0;
+}
+
+.sidebar .content {
+    padding: 16px;
+    text-align: center;
+    margin-left: 10px; /* Adjust margin to shift text slightly to the right */
+    background-color: #f1f1f1; /* Adjust background color */
+    color: #333; /* Adjust text color */
+    transition: margin-left 0.5s; /* Add transition for smoother effect */
+}
+
+
+
+/* Add this style for logout button */
+.logout-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2; /* Ensure logout button is above the reservations button */
+}
+
+.logout-container button {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    background-color: #fff;
+    color: #3fc3af;
+    border: 1px solid #3fc3af;
+    border-radius: 10px;
+    z-index: 1;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logout-container button:hover {
+    background-color: #f0f0f0;
+    color: #3fc3af;
 }
 
 /* Responsive styles for smaller screens */

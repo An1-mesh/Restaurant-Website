@@ -8,3 +8,13 @@ function changeTab(tabId) {
         }
     });
 }
+
+function logout() {
+    // Redirect to index.html on logout
+    window.location.href = 'index.html';
+}
+
+function toggleCollapsible() {
+    var reservationsSidebar = document.getElementById('reservationsSidebar');
+    reservationsSidebar.classList.toggle('collapsed');
+}
